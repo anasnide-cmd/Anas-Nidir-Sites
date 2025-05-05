@@ -1,101 +1,250 @@
 <!doctype html>
-<html lang="ms"> 
- <head> 
-  <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Mr Anas Nidir</title> 
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr Anas Nidir</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; background-color: #f9f9f9; color: #333; }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f5f5f5; color: #333; }
 
     header {
       background-color: #111;
       color: white;
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
+      animation: fadeInDown 1s ease;
     }
 
     nav {
       background: #222;
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 30px;
       padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ddd;
     }
 
     section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       max-width: 900px;
       margin: auto;
+      animation: fadeIn 1s ease-in;
     }
 
     h2 {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       color: #222;
+      font-size: 28px;
+      border-left: 5px solid #000;
+      padding-left: 10px;
     }
 
     .btn {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 10px 25px;
       background-color: #000;
       color: #fff;
       text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
+      border-radius: 8px;
+      margin-top: 15px;
+      transition: background 0.3s;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      color: white;
-      margin-top: 40px;
+    .btn:hover {
+      background-color: #333;
     }
 
     .product {
       background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+      transition: transform 0.3s;
     }
-  </style> 
- </head> 
- <body> 
-  <header> 
-   <h1>Mr Anas Nidir</h1> 
-   <p>Fashion Premium | Gaya Moden &amp; Eksklusif</p> 
-  </header> 
-  <nav> <a href="#tentang">Tentang</a> <a href="#produk">Produk</a> <a href="#hubungi">Hubungi</a> 
-  </nav> 
-  <section id="tentang"> 
-   <h2>Tentang Kami</h2> 
-   <p>Mr Anas Nidir adalah jenama fashion premium yang menawarkan t-shirt oversize dengan kualiti tinggi, rekaan minimalis dan sesuai untuk gaya harian anda.</p> 
-  </section> 
-  <section id="produk"> 
-   <h2>Produk Kami</h2> 
-   <div class="product"> 
-    <h3>Plain Oversize T-Shirt</h3> 
-    <p>Kualiti premium. Material selesa. Sesuai untuk semua gaya.</p> <a href="#" class="btn">Beli Sekarang</a> 
-   </div> 
-   <div class="product"> 
-    <h3>Custom Nama T-Shirt</h3> 
-    <p>Tempah t-shirt dengan nama anda. Gaya unik &amp; eksklusif.</p> <a href="#" class="btn">Tempah Sekarang</a> 
-   </div> 
-  </section> 
-  <section id="hubungi"> 
-   <h2>Hubungi Kami</h2> 
-   <p>Email: support@mranasnidir.com</p> 
-   <p>Instagram: @mr.anasnidir</p> 
-  </section> 
-  <footer> 
-   <p>© 2025 Mr Anas Nidir. Hak cipta terpelihara.</p> 
-  </footer> 
- </body>
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #111;
+      color: white;
+      margin-top: 60px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Chatbot */
+    #chatbot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 999;
+    }
+
+    #chatbot-header {
+      background: #000;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    #chatbot-messages {
+      height: 200px;
+      padding: 10px;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+
+    #chatbot-input {
+      display: flex;
+      border-top: 1px solid #ddd;
+    }
+
+    #chatbot-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+    }
+
+    #chatbot-input button {
+      background: #000;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    #chat-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #000;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mr Anas Nidir</h1>
+  <p>Fashion Premium | Gaya Moden & Eksklusif</p>
+</header>
+
+<nav>
+  <a href="#tentang">Tentang</a>
+  <a href="#produk">Produk</a>
+  <a href="#hubungi">Hubungi</a>
+</nav>
+
+<section id="tentang">
+  <h2>Tentang Kami</h2>
+  <p>Mr Anas Nidir adalah jenama fashion premium yang menawarkan t-shirt oversize dengan kualiti tinggi, rekaan minimalis dan sesuai untuk gaya harian anda.</p>
+</section>
+
+<section id="produk">
+  <h2>Produk Kami</h2>
+  <div class="product">
+    <h3>Plain Oversize T-Shirt</h3>
+    <p>Kualiti premium. Material selesa. Sesuai untuk semua gaya.</p>
+    <a href="#" class="btn">Beli Sekarang</a>
+  </div>
+  <div class="product">
+    <h3>Custom Nama T-Shirt</h3>
+    <p>Tempah t-shirt dengan nama anda. Gaya unik & eksklusif.</p>
+    <a href="#" class="btn">Tempah Sekarang</a>
+  </div>
+</section>
+
+<section id="hubungi">
+  <h2>Hubungi Kami</h2>
+  <p>Email: support@mranasnidir.com</p>
+  <p>Instagram: @mr.anasnidir</p>
+</section>
+
+<footer>
+  <p>© 2025 Mr Anas Nidir. Hak cipta terpelihara.</p>
+</footer>
+
+<!-- Chatbot UI -->
+<button id="chat-toggle">Chat</button>
+
+<div id="chatbot">
+  <div id="chatbot-header">AI Chatbot</div>
+  <div id="chatbot-messages">
+    <p><strong>Bot:</strong> Hai! Ada yang saya boleh bantu?</p>
+  </div>
+  <div id="chatbot-input">
+    <input type="text" id="user-input" placeholder="Tulis mesej...">
+    <button onclick="sendMessage()">Hantar</button>
+  </div>
+</div>
+
+<script>
+  const toggleBtn = document.getElementById("chat-toggle");
+  const chatbot = document.getElementById("chatbot");
+  const messages = document.getElementById("chatbot-messages");
+  const input = document.getElementById("user-input");
+
+  toggleBtn.onclick = () => {
+    chatbot.style.display = chatbot.style.display === "flex" ? "none" : "flex";
+  };
+
+  function sendMessage() {
+    const text = input.value.trim();
+    if (!text) return;
+
+    const userMsg = document.createElement("p");
+    userMsg.innerHTML = `<strong>Anda:</strong> ${text}`;
+    messages.appendChild(userMsg);
+
+    const botReply = document.createElement("p");
+    botReply.innerHTML = `<strong>Bot:</strong> Ini hanya contoh chatbot. Untuk pertanyaan lanjut, sila hubungi kami di email atau Instagram.`;
+    messages.appendChild(botReply);
+
+    input.value = "";
+    messages.scrollTop = messages.scrollHeight;
+  }
+</script>
+
+</body>
 </html>
