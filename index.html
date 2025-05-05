@@ -1,250 +1,220 @@
-<!doctype html>
-<html lang="ms">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mr Anas Nidir</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anas Nide - Creative Content Creator & IT Enthusiast from Malaysia">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anas Nide | Content Creator & Digital Innovator">
+  <meta property="og:description" content="Explore the world of fashion, tech, and lifestyle with Anas Nide">
+  <meta property="og:image" content="https://example.com/preview.jpg">
+  
+  <title>Anas Nide | Content Creator & Digital Innovator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-    body { font-family: 'Segoe UI', sans-serif; background-color: #f5f5f5; color: #333; }
-
-    header {
-      background-color: #111;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-      animation: fadeInDown 1s ease;
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
     }
-
-    nav {
-      background: #222;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 15px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #ddd;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-      animation: fadeIn 1s ease-in;
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      color: #222;
-      font-size: 28px;
-      border-left: 5px solid #000;
-      padding-left: 10px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 25px;
-      background-color: #000;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      margin-top: 15px;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #333;
-    }
-
-    .product {
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      margin-bottom: 30px;
-      transition: transform 0.3s;
-    }
-
-    .product:hover {
-      transform: translateY(-5px);
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #111;
-      color: white;
-      margin-top: 60px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Chatbot */
-    #chatbot {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 300px;
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      display: none;
-      flex-direction: column;
-      overflow: hidden;
-      z-index: 999;
-    }
-
-    #chatbot-header {
-      background: #000;
-      color: white;
-      padding: 10px;
-      font-weight: bold;
-    }
-
-    #chatbot-messages {
-      height: 200px;
-      padding: 10px;
-      overflow-y: auto;
-      font-size: 14px;
-    }
-
-    #chatbot-input {
-      display: flex;
-      border-top: 1px solid #ddd;
-    }
-
-    #chatbot-input input {
-      flex: 1;
-      padding: 10px;
-      border: none;
-      outline: none;
-    }
-
-    #chatbot-input button {
-      background: #000;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-    }
-
-    #chat-toggle {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #000;
-      color: white;
-      border: none;
-      padding: 12px 18px;
-      border-radius: 50px;
-      cursor: pointer;
-      z-index: 1000;
-    }
+    .animate-float { animation: float 3s ease-in-out infinite; }
   </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
 
-<header>
-  <h1>Mr Anas Nidir</h1>
-  <p>Fashion Premium | Gaya Moden & Eksklusif</p>
-</header>
+  <!-- Navigation -->
+  <header class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+      <a href="#" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        AN
+      </a>
+      <div class="flex items-center space-x-6 mt-2 md:mt-0">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#content" class="nav-link">Content</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+          <i class="fas fa-moon hidden dark:block"></i>
+          <i class="fas fa-sun block dark:hidden"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
 
-<nav>
-  <a href="#tentang">Tentang</a>
-  <a href="#produk">Produk</a>
-  <a href="#hubungi">Hubungi</a>
-</nav>
+  <!-- Hero Section -->
+  <main class="isolate">
+    <section class="relative pt-24 pb-20">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="animate-float">
+          <div class="relative inline-block">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 blur-3xl opacity-30 rounded-full"></div>
+            <img src="profile.jpg" alt="Anas Nide Profile" 
+                 class="relative w-48 h-48 rounded-full object-cover shadow-2xl mx-auto border-4 border-white dark:border-gray-900">
+          </div>
+        </div>
+        <h1 class="mt-12 text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          Anas Nide
+        </h1>
+        <p class="mt-4 text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          Bridging Tech & Fashion through Creative Storytelling
+        </p>
+        <div class="mt-8 flex justify-center gap-4">
+          <a href="#contact" class="hero-btn">
+            Get in Touch <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+          <a href="#content" class="hero-btn-outline">
+            View Work <i class="fas fa-play ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
 
-<section id="tentang">
-  <h2>Tentang Kami</h2>
-  <p>Mr Anas Nidir adalah jenama fashion premium yang menawarkan t-shirt oversize dengan kualiti tinggi, rekaan minimalis dan sesuai untuk gaya harian anda.</p>
-</section>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+            <img src="about-image.jpg" alt="About Anas" 
+                 class="relative rounded-3xl shadow-xl w-full h-auto">
+          </div>
+          <div>
+            <h2 class="text-4xl font-bold mb-6">Digital Innovator & Style Curator</h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+              Merging technical expertise with fashion-forward thinking, I create content that inspires digital natives.
+              With 3+ years in content creation and IT development, I bring unique perspectives to tech reviews and
+              style showcases.
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
+                <h3 class="font-bold text-blue-600 dark:text-blue-400">1M+</h3>
+                <p class="text-sm">Total Views</p>
+              </div>
+              <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
+                <h3 class="font-bold text-purple-600 dark:text-purple-400">500+</h3>
+                <p class="text-sm">Content Pieces</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="produk">
-  <h2>Produk Kami</h2>
-  <div class="product">
-    <h3>Plain Oversize T-Shirt</h3>
-    <p>Kualiti premium. Material selesa. Sesuai untuk semua gaya.</p>
-    <a href="#" class="btn">Beli Sekarang</a>
-  </div>
-  <div class="product">
-    <h3>Custom Nama T-Shirt</h3>
-    <p>Tempah t-shirt dengan nama anda. Gaya unik & eksklusif.</p>
-    <a href="#" class="btn">Tempah Sekarang</a>
-  </div>
-</section>
+    <!-- Content Section -->
+    <section id="content" class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Content Portfolio</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Video Card -->
+          <div class="content-card">
+            <div class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-xl"></div>
+            <h3 class="text-xl font-bold mt-4">Latest Tech Reviews</h3>
+            <p class="text-gray-600 dark:text-gray-400 mt-2">In-depth analysis of cutting-edge technology</p>
+          </div>
+          <!-- Fashion Card -->
+          <div class="content-card">
+            <div class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-xl"></div>
+            <h3 class="text-xl font-bold mt-4">Urban Fashion Diaries</h3>
+            <p class="text-gray-600 dark:text-gray-400 mt-2">Streetwear trends & personal style evolution</p>
+          </div>
+          <!-- Tech Card -->
+          <div class="content-card">
+            <div class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-xl"></div>
+            <h3 class="text-xl font-bold mt-4">Developer Insights</h3>
+            <p class="text-gray-600 dark:text-gray-400 mt-2">Coding tutorials & project breakdowns</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="hubungi">
-  <h2>Hubungi Kami</h2>
-  <p>Email: support@mranasnidir.com</p>
-  <p>Instagram: @mr.anasnidir</p>
-</section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100 dark:bg-gray-800">
+      <div class="max-w-3xl mx-auto px-4">
+        <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8">
+          <h2 class="text-3xl font-bold text-center mb-8">Collaborate with Me</h2>
+          <form class="space-y-6">
+            <div>
+              <label class="block text-sm font-medium mb-2">Full Name</label>
+              <input type="text" class="form-input" placeholder="Enter your name">
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Email Address</label>
+              <input type="email" class="form-input" placeholder="hello@example.com">
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Message</label>
+              <textarea class="form-input h-32" placeholder="Your message..."></textarea>
+            </div>
+            <button type="submit" class="w-full hero-btn">
+              Send Message <i class="fas fa-paper-plane ml-2"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<footer>
-  <p>© 2025 Mr Anas Nidir. Hak cipta terpelihara.</p>
-</footer>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-white font-bold mb-4">Anas Nide</h3>
+          <p class="text-sm">Creating at the intersection of technology and creativity</p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">Navigation</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#content" class="footer-link">Content</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">Connect</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">Newsletter</h4>
+          <form class="flex gap-2">
+            <input type="email" placeholder="Enter email" class="newsletter-input">
+            <button type="submit" class="newsletter-btn">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm">
+        <p>&copy; 2025 Anas Nide. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
 
-<!-- Chatbot UI -->
-<button id="chat-toggle">Chat</button>
+  <script>
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
 
-<div id="chatbot">
-  <div id="chatbot-header">AI Chatbot</div>
-  <div id="chatbot-messages">
-    <p><strong>Bot:</strong> Hai! Ada yang saya boleh bantu?</p>
-  </div>
-  <div id="chatbot-input">
-    <input type="text" id="user-input" placeholder="Tulis mesej...">
-    <button onclick="sendMessage()">Hantar</button>
-  </div>
-</div>
+    themeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
 
-<script>
-  const toggleBtn = document.getElementById("chat-toggle");
-  const chatbot = document.getElementById("chatbot");
-  const messages = document.getElementById("chatbot-messages");
-  const input = document.getElementById("user-input");
-
-  toggleBtn.onclick = () => {
-    chatbot.style.display = chatbot.style.display === "flex" ? "none" : "flex";
-  };
-
-  function sendMessage() {
-    const text = input.value.trim();
-    if (!text) return;
-
-    const userMsg = document.createElement("p");
-    userMsg.innerHTML = `<strong>Anda:</strong> ${text}`;
-    messages.appendChild(userMsg);
-
-    const botReply = document.createElement("p");
-    botReply.innerHTML = `<strong>Bot:</strong> Ini hanya contoh chatbot. Untuk pertanyaan lanjut, sila hubungi kami di email atau Instagram.`;
-    messages.appendChild(botReply);
-
-    input.value = "";
-    messages.scrollTop = messages.scrollHeight;
-  }
-</script>
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
