@@ -9,9 +9,10 @@
   <meta property="og:title" content="Mr Anas Nidir | Content Creator & Digital Innovator">
   <meta property="og:description" content="Explore the world of fashion, tech, and lifestyle with Mr Anas Nidir">
   <meta property="og:image" content="https://example.com/preview.jpg">
-  
+
   <title>Mr Anas Nidir | Content Creator & Digital Innovator</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
@@ -19,6 +20,7 @@
       --light-text: #111827;
       --light-card: #ffffff;
       --light-subtext: #6b7280;
+
       --dark-bg: #1a202c;
       --dark-text: #f7fafc;
       --dark-card: #2d3748;
@@ -59,8 +61,7 @@
   <!-- Navigation -->
   <header class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
     <nav class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
-      <!-- Logo Replaced Here -->
-      <a href="#" class="flex items-center space-x-2 transition-transform duration-300 hover:scale-105">
+      <a href="#" class="flex items-center space-x-2 transition-transform duration-300 hover:scale-105 scroll-reveal-logo">
         <img src="images/IMG_20250407_090454.png" alt="Mr Anas Nidir Logo" class="h-10 w-auto md:h-12">
       </a>
       <div class="flex items-center space-x-6 mt-2 md:mt-0">
@@ -82,7 +83,7 @@
         <div class="animate-float">
           <div class="relative inline-block">
             <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 blur-3xl opacity-30 rounded-full"></div>
-            <img src="images/IMG_20250506_090814.jpg" alt="Mr Anas Nidir Profile" 
+            <img src="images/IMG_20250506_090814.jpg" alt="Mr Anas Nidir Profile"
                  class="relative w-48 h-48 rounded-full object-cover shadow-2xl mx-auto border-4 border-white dark:border-gray-900">
           </div>
         </div>
@@ -109,7 +110,7 @@
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div class="relative group">
             <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-            <img src="about-image.jpg" alt="About Mr Anas Nidir" 
+            <img src="about-image.jpg" alt="About Mr Anas Nidir"
                  class="relative rounded-3xl shadow-xl w-full h-auto">
           </div>
           <div>
@@ -213,11 +214,31 @@
     </div>
   </footer>
 
+  <!-- Theme Toggle + ScrollReveal -->
   <script>
     const themeToggleButton = document.getElementById('theme-toggle');
     const body = document.body;
+
     themeToggleButton.addEventListener('click', () => {
       body.classList.toggle('dark');
+    });
+
+    ScrollReveal().reveal('.scroll-reveal-logo', {
+      origin: 'top',
+      distance: '40px',
+      duration: 1000,
+      delay: 200,
+      easing: 'ease-out',
+      reset: false
+    });
+
+    ScrollReveal().reveal('.content-card', {
+      origin: 'bottom',
+      distance: '60px',
+      duration: 1000,
+      delay: 300,
+      interval: 200,
+      reset: false
     });
   </script>
 
