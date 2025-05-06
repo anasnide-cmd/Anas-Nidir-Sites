@@ -14,13 +14,11 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Style for body and elements */
     :root {
       --light-bg: #f9fafb;
       --light-text: #111827;
       --light-card: #ffffff;
       --light-subtext: #6b7280;
-
       --dark-bg: #1a202c;
       --dark-text: #f7fafc;
       --dark-card: #2d3748;
@@ -37,7 +35,6 @@
       color: var(--dark-text);
     }
 
-    /* Other styles */
     .hero-btn {
       @apply px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow hover:brightness-110 transition;
     }
@@ -46,7 +43,6 @@
       @apply px-6 py-3 border border-blue-500 text-blue-600 font-semibold rounded-xl hover:bg-blue-600 hover:text-white transition;
     }
 
-    /* Link styles */
     .footer-link {
       color: #fff;
       text-decoration: none;
@@ -63,8 +59,9 @@
   <!-- Navigation -->
   <header class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
     <nav class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
-      <a href="#" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-        MAN
+      <!-- Logo Replaced Here -->
+      <a href="#" class="flex items-center space-x-2 transition-transform duration-300 hover:scale-105">
+        <img src="images/IMG_20250407_090454.png" alt="Mr Anas Nidir Logo" class="h-10 w-auto md:h-12">
       </a>
       <div class="flex items-center space-x-6 mt-2 md:mt-0">
         <a href="#about" class="nav-link">About</a>
@@ -142,19 +139,16 @@
       <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-4xl font-bold text-center mb-12">Content Portfolio</h2>
         <div class="grid md:grid-cols-3 gap-8">
-          <!-- Video Card -->
           <div class="content-card">
             <div class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-xl"></div>
             <h3 class="text-xl font-bold mt-4">Latest Tech Reviews</h3>
             <p class="text-gray-600 dark:text-gray-400 mt-2">In-depth analysis of cutting-edge technology</p>
           </div>
-          <!-- Fashion Card -->
           <div class="content-card">
             <div class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-xl"></div>
             <h3 class="text-xl font-bold mt-4">Urban Fashion Diaries</h3>
             <p class="text-gray-600 dark:text-gray-400 mt-2">Streetwear trends & personal style evolution</p>
           </div>
-          <!-- Tech Card -->
           <div class="content-card">
             <div class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-xl"></div>
             <h3 class="text-xl font-bold mt-4">Developer Insights</h3>
@@ -222,7 +216,6 @@
   <script>
     const themeToggleButton = document.getElementById('theme-toggle');
     const body = document.body;
-
     themeToggleButton.addEventListener('click', () => {
       body.classList.toggle('dark');
     });
