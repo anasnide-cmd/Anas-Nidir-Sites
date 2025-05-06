@@ -4,16 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Mr Anas Nidir - Creative Content Creator & IT Enthusiast from Malaysia">
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Mr Anas Nidir | Content Creator & Digital Innovator">
   <meta property="og:description" content="Explore the world of fashion, tech, and lifestyle with Mr Anas Nidir">
   <meta property="og:image" content="https://example.com/preview.jpg">
-
+  
   <title>Mr Anas Nidir | Content Creator & Digital Innovator</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
   <style>
+    /* Style for body and elements */
     :root {
       --light-bg: #f9fafb;
       --light-text: #111827;
@@ -36,6 +37,7 @@
       color: var(--dark-text);
     }
 
+    /* Other styles */
     .hero-btn {
       @apply px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow hover:brightness-110 transition;
     }
@@ -44,6 +46,7 @@
       @apply px-6 py-3 border border-blue-500 text-blue-600 font-semibold rounded-xl hover:bg-blue-600 hover:text-white transition;
     }
 
+    /* Link styles */
     .footer-link {
       color: #fff;
       text-decoration: none;
@@ -52,33 +55,6 @@
 
     .footer-link:hover {
       color: #90cdf4;
-    }
-
-    /* Neon Glow Animation */
-    @keyframes neon-glow {
-      0%, 100% {
-        text-shadow: 0 0 10px #7f5af0, 0 0 20px #7f5af0, 0 0 30px #7f5af0;
-      }
-      50% {
-        text-shadow: 0 0 15px #7f5af0, 0 0 25px #7f5af0, 0 0 40px #7f5af0;
-      }
-    }
-
-    @keyframes neon-button-glow {
-      0%, 100% {
-        box-shadow: 0 0 10px #3b82f6, 0 0 20px #9333ea;
-      }
-      50% {
-        box-shadow: 0 0 20px #3b82f6, 0 0 30px #9333ea;
-      }
-    }
-
-    .neon-text {
-      animation: neon-glow 2s infinite alternate;
-    }
-
-    .neon-button {
-      animation: neon-button-glow 2s infinite alternate;
     }
   </style>
 </head>
@@ -113,14 +89,14 @@
                  class="relative w-48 h-48 rounded-full object-cover shadow-2xl mx-auto border-4 border-white dark:border-gray-900">
           </div>
         </div>
-        <h1 class="mt-12 text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent neon-text">
+        <h1 class="mt-12 text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
           Mr Anas Nidir
         </h1>
         <p class="mt-4 text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
           Bridging Tech & Fashion through Creative Storytelling
         </p>
         <div class="mt-8 flex justify-center gap-4">
-          <a href="#contact" class="hero-btn neon-button">
+          <a href="#contact" class="hero-btn">
             Get in Touch <i class="fas fa-arrow-right ml-2"></i>
           </a>
           <a href="#content" class="hero-btn-outline">
@@ -130,11 +106,118 @@
       </div>
     </section>
 
-    <!-- (No changes needed below unless you want more neon effects elsewhere) -->
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+            <img src="about-image.jpg" alt="About Mr Anas Nidir" 
+                 class="relative rounded-3xl shadow-xl w-full h-auto">
+          </div>
+          <div>
+            <h2 class="text-4xl font-bold mb-6">Digital Innovator & Style Curator</h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+              Merging technical expertise with fashion-forward thinking, I create content that inspires digital natives.
+              With 3+ years in content creation and IT development, I bring unique perspectives to tech reviews and
+              style showcases.
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
+                <h3 class="font-bold text-blue-600 dark:text-blue-400">1M+</h3>
+                <p class="text-sm">Total Views</p>
+              </div>
+              <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
+                <h3 class="font-bold text-purple-600 dark:text-purple-400">500+</h3>
+                <p class="text-sm">Content Pieces</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- ...[about, content, contact, footer sections remain the same]... -->
+    <!-- Content Section -->
+    <section id="content" class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Content Portfolio</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Video Card -->
+          <div class="content-card">
+            <div class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-xl"></div>
+            <h3 class="text-xl font-bold mt-4">Latest Tech Reviews</h3>
+            <p class="text-gray-600 dark:text-gray-400 mt-2">In-depth analysis of cutting-edge technology</p>
+          </div>
+          <!-- Fashion Card -->
+          <div class="content-card">
+            <div class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-xl"></div>
+            <h3 class="text-xl font-bold mt-4">Urban Fashion Diaries</h3>
+            <p class="text-gray-600 dark:text-gray-400 mt-2">Streetwear trends & personal style evolution</p>
+          </div>
+          <!-- Tech Card -->
+          <div class="content-card">
+            <div class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-xl"></div>
+            <h3 class="text-xl font-bold mt-4">Developer Insights</h3>
+            <p class="text-gray-600 dark:text-gray-400 mt-2">Coding tutorials & project breakdowns</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100 dark:bg-gray-800">
+      <div class="max-w-3xl mx-auto px-4">
+        <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8">
+          <h2 class="text-3xl font-bold text-center mb-8">Collaborate with Me</h2>
+          <form class="space-y-6">
+            <div>
+              <label class="block text-sm font-medium mb-2">Full Name</label>
+              <input type="text" class="form-input" placeholder="Enter your name">
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Email Address</label>
+              <input type="email" class="form-input" placeholder="hello@example.com">
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Message</label>
+              <textarea class="form-input h-32" placeholder="Your message..."></textarea>
+            </div>
+            <button type="submit" class="w-full hero-btn">
+              Send Message <i class="fas fa-paper-plane ml-2"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-white font-bold mb-4">Mr Anas Nidir</h3>
+          <p class="text-sm">Creating at the intersection of technology and creativity</p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">Navigation</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#content" class="footer-link">Content</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">Follow Me</h4>
+          <ul class="space-y-2">
+            <li><a href="https://youtube.com/@anasnide" target="_blank" class="footer-link">YouTube</a></li>
+            <li><a href="https://www.instagram.com/anasnide" target="_blank" class="footer-link">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@anasnide" target="_blank" class="footer-link">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script>
     const themeToggleButton = document.getElementById('theme-toggle');
