@@ -14,6 +14,18 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    :root {
+      --light-bg: #f9fafb;
+      --light-text: #111827;
+      --light-card: #ffffff;
+      --light-subtext: #6b7280;
+
+      --dark-bg: #1a202c;
+      --dark-text: #f7fafc;
+      --dark-card: #2d3748;
+      --dark-subtext: #a0aec0;
+    }
+
     @keyframes float {
       0% { transform: translateY(0px); }
       50% { transform: translateY(-20px); }
@@ -23,31 +35,61 @@
 
     /* Tema Terang */
     body {
-      background-color: #f9fafb;
-      color: #111827;
+      background-color: var(--light-bg);
+      color: var(--light-text);
     }
 
     /* Tema Gelap */
     body.dark {
-      background-color: #1f2937;
-      color: #e5e7eb;
+      background-color: var(--dark-bg);
+      color: var(--dark-text);
     }
 
     /* Sesuaikan gaya elemen lain berdasarkan tema */
     .dark .bg-white {
-      background-color: #2d3748;
+      background-color: var(--dark-card);
     }
 
     .dark .text-gray-600 {
-      color: #e5e7eb;
+      color: var(--dark-subtext);
     }
-    
-    .dark .text-gray-300 {
-      color: #cbd5e0;
-    }
-    
+
     .dark .bg-gray-100 {
-      background-color: #4a5568;
+      background-color: #374151;
+    }
+
+    .form-input {
+      @apply w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500;
+    }
+
+    .hero-btn {
+      @apply px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow hover:brightness-110 transition;
+    }
+
+    .hero-btn-outline {
+      @apply px-6 py-3 border border-blue-500 text-blue-600 font-semibold rounded-xl hover:bg-blue-600 hover:text-white transition;
+    }
+
+    .dark .hero-btn-outline {
+      border-color: #90cdf4;
+      color: #90cdf4;
+    }
+
+    .dark .hero-btn-outline:hover {
+      background-color: #90cdf4;
+      color: #1a202c;
+    }
+
+    .newsletter-input {
+      @apply flex-1 px-4 py-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400;
+    }
+
+    .newsletter-btn {
+      @apply px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition;
+    }
+
+    * {
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     }
   </style>
 </head>
