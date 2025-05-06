@@ -1,1 +1,37 @@
+/* styles.css */
 
+/* Gaya untuk tombol hero */
+.hero-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+.hero-btn:hover {
+  background-color: #45a049;
+}
+
+/* Styling untuk form input */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.form-input:focus {
+  border-color: #4CAF50;
+}
+
+/* Button untuk form */
+.newsletter-btn {
+  background-color: #4CAF50;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+}
