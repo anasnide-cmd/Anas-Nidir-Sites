@@ -1,212 +1,150 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mr Anas Nidir - Creative Content Creator & IT Enthusiast from Malaysia">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Mr Anas Nidir | Content Creator & Digital Innovator">
-  <meta property="og:description" content="Explore the world of fashion, tech, and lifestyle with Mr Anas Nidir">
-  <meta property="og:image" content="https://example.com/preview.jpg">
-
-  <title>Mr Anas Nidir | Content Creator & Digital Innovator</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!doctype html>
+<html lang="en" class="scroll-smooth"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Anas Nide</title> 
+  <script src="https://cdn.tailwindcss.com"></script> 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> 
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
   <style>
-    /* Style tambahan untuk dropdown menu */
-    .dropdown {
-      position: relative;
-      display: inline-block;
+    .dark-mode {
+      background-color: #1f2937;
+      color: white;
     }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9fafb;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #ddd;
-    }
-  </style>
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
-
-  <!-- Navigation -->
-  <header class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
-    <nav class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
-      <a href="#" class="flex items-center space-x-2 transition-transform duration-300 hover:scale-105 scroll-reveal-logo">
-        <img src="images/IMG_20250407_090454.png" alt="Mr Anas Nidir Logo" class="h-10 w-auto md:h-12">
-      </a>
-      <div class="flex items-center space-x-6 mt-2 md:mt-0">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#content" class="nav-link">Content</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        
-        <!-- Dropdown Menu Button -->
-        <div class="dropdown">
-          <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#page1">Page 1</a>
-            <a href="#page2">Page 2</a>
-            <a href="#page3">Page 3</a>
-            <a href="#page4">Page 4</a>
-          </div>
-        </div>
-        
-        <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
-          <i class="fas fa-moon hidden dark:block"></i>
-          <i class="fas fa-sun block dark:hidden"></i>
-        </button>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <main class="isolate">
-    <section class="relative pt-24 pb-20">
-      <div class="max-w-7xl mx-auto px-4 text-center">
-        <div class="animate-float">
-          <div class="relative inline-block">
-            <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 blur-3xl opacity-30 rounded-full"></div>
-            <div class="profile-image-container">
-              <img src="images/IMG_20250506_090814.jpg" alt="Mr Anas Nidir Profile"
-                   class="relative w-48 h-48 rounded-full object-cover shadow-2xl mx-auto border-4 border-white dark:border-gray-900">
-            </div>
-          </div>
-        </div>
-        <h1 class="mt-12 text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          Mr Anas Nidir
-        </h1>
-        <p class="mt-4 text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Bridging Tech & Fashion through Creative Storytelling
-        </p>
-        <div class="mt-8 flex justify-center gap-4">
-          <a href="#contact" class="hero-btn">
-            Get in Touch <i class="fas fa-arrow-right ml-2"></i>
-          </a>
-          <a href="#content" class="hero-btn-outline">
-            View Work <i class="fas fa-play ml-2"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white dark:bg-gray-800">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="relative group">
-            <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-            <img src="about-image.jpg" alt="About Mr Anas Nidir"
-                 class="relative rounded-3xl shadow-xl w-full h-auto">
-          </div>
-          <div>
-            <h2 class="text-4xl font-bold mb-6">Digital Innovator & Style Curator</h2>
-            <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
-              Merging technical expertise with fashion-forward thinking, I create content that inspires digital natives.
-              With 3+ years in content creation and IT development, I bring unique perspectives to tech reviews and
-              style showcases.
-            </p>
-            <div class="grid grid-cols-2 gap-4">
-              <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
-                <h3 class="font-bold text-blue-600 dark:text-blue-400">1M+</h3>
-                <p class="text-sm">Total Views</p>
-              </div>
-              <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
-                <h3 class="font-bold text-purple-600 dark:text-purple-400">500+</h3>
-                <p class="text-sm">Content Pieces</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Content Section -->
-    <section id="content" class="py-20">
-      <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-12">Content Portfolio</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="content-card">
-            <div class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-xl"></div>
-            <h3 class="text-xl font-bold mt-4">Latest Tech Reviews</h3>
-            <p class="text-gray-600 dark:text-gray-400 mt-2">In-depth analysis of cutting-edge technology</p>
-          </div>
-          <div class="content-card">
-            <div class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-xl"></div>
-            <h3 class="text-xl font-bold mt-4">Urban Fashion Diaries</h3>
-            <p class="text-gray-600 dark:text-gray-400 mt-2">Streetwear trends & personal style evolution</p>
-          </div>
-          <div class="content-card">
-            <div class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-xl"></div>
-            <h3 class="text-xl font-bold mt-4">Developer Insights</h3>
-            <p class="text-gray-600 dark:text-gray-400 mt-2">Coding tutorials & project breakdowns</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-100 dark:bg-gray-800">
-      <div class="max-w-3xl mx-auto px-4">
-        <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8">
-          <h2 class="text-3xl font-bold text-center mb-8">Collaborate with Me</h2>
-          <form class="space-y-6">
-            <div>
-              <label class="block text-sm font-medium mb-2">Full Name</label>
-              <input type="text" class="form-input" placeholder="Enter your name">
-            </div>
-            <div>
-              <label class="block text-sm font-medium mb-2">Email Address</label>
-              <input type="email" class="form-input" placeholder="Enter your email">
-            </div>
-            <div>
-              <label class="block text-sm font-medium mb-2">Message</label>
-              <textarea class="form-input" placeholder="Your message" rows="4"></textarea>
-            </div>
-            <button type="submit" class="hero-btn">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-12">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex justify-between items-center">
-        <div class="space-x-4">
-          <a href="https://www.instagram.com" class="footer-link" target="_blank">Instagram</a>
-          <a href="https://www.twitter.com" class="footer-link" target="_blank">Twitter</a>
-          <a href="https://www.linkedin.com" class="footer-link" target="_blank">LinkedIn</a>
-        </div>
-        <p class="text-center text-sm">© 2025 Mr Anas Nidir. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
-
+  </style> 
+ </head> 
+ <body class="bg-gray-50 text-gray-800 font-sans transition-all duration-300" id="body"> <!-- Dark Mode Toggle --> 
+  <div class="fixed top-4 right-4 z-50"> <button onclick="toggleDarkMode()" class="bg-gray-200 dark:bg-gray-800 p-2 rounded-full shadow"> <i class="fas fa-moon text-gray-700 dark:text-white"></i> </button> 
+  </div> <!-- Header --> 
+  <header class="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-40"> 
+   <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center"> 
+    <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Anas Nide </h1> 
+    <nav class="flex space-x-6 mt-2 md:mt-0 text-gray-600 dark:text-gray-300"> <a href="#about" class="hover:text-black dark:hover:text-white">About</a> <a href="#content" class="hover:text-black dark:hover:text-white">Content</a> <a href="#stats" class="hover:text-black dark:hover:text-white">Stats</a> <a href="#contact" class="hover:text-black dark:hover:text-white">Contact</a> 
+    </nav> 
+   </div> 
+  </header> <!-- Hero Section --> 
+  <section class="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 py-24 text-center"> 
+   <div class="max-w-4xl mx-auto px-4"> 
+    <h2 class="text-5xl font-bold mb-4"> Hi, I'm <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Anas</span> </h2> 
+    <p class="text-xl text-gray-600 dark:text-gray-300 mb-6"> <span id="typed-text"></span> </p> <a href="#contact" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105"> Let's Connect ➔ </a> 
+   </div> 
+  </section> <!-- About Me --> 
+  <section id="about" class="max-w-6xl mx-auto px-4 py-20"> 
+   <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 md:p-12" data-aos="fade-up"> 
+    <h3 class="text-3xl font-bold mb-6 text-center">About Me</h3> 
+    <div class="flex flex-col md:flex-row items-center gap-8"> 
+     <img src="https://via.placeholder.com/300" alt="Anas Nide" class="w-64 h-64 rounded-full object-cover shadow-md mb-6 md:mb-0"> 
+     <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-lg"> I'm Anas, a content creator based in Malaysia. I love exploring the world of IT and expressing my style through OOTD content. I enjoy making videos that inspire, entertain, and share a bit of who I am with the world. </p> 
+    </div> 
+   </div> 
+  </section> <!-- Content Gallery --> 
+  <section id="content" class="py-20 bg-gradient-to-b from-white to-blue-50 dark:from-gray-900 dark:to-gray-800"> 
+   <div class="max-w-6xl mx-auto px-4"> 
+    <h3 class="text-3xl font-bold mb-12 text-center">My Content</h3> 
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8"> 
+     <div onclick="openModal('ootd')" class="cursor-pointer bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up"> 
+      <img src="https://via.placeholder.com/400x250" class="w-full h-48 object-cover rounded-lg mb-4"> 
+      <h4 class="font-bold text-xl mb-3">OOTD Videos</h4> 
+      <p class="text-gray-600 dark:text-gray-300">Daily outfits &amp; streetwear vibes.</p> 
+     </div> 
+     <div onclick="openModal('tech')" class="cursor-pointer bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up"> 
+      <img src="https://via.placeholder.com/400x250" class="w-full h-48 object-cover rounded-lg mb-4"> 
+      <h4 class="font-bold text-xl mb-3">IT &amp; Tech</h4> 
+      <p class="text-gray-600 dark:text-gray-300">Apps, tools &amp; productivity hacks.</p> 
+     </div> 
+     <div onclick="openModal('quotes')" class="cursor-pointer bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up"> 
+      <img src="https://via.placeholder.com/400x250" class="w-full h-48 object-cover rounded-lg mb-4"> 
+      <h4 class="font-bold text-xl mb-3">Quotes &amp; Lifestyle</h4> 
+      <p class="text-gray-600 dark:text-gray-300">Daily inspiration &amp; reflections.</p> 
+     </div> 
+    </div> 
+   </div> 
+  </section> <!-- Stats Counter --> 
+  <section id="stats" class="py-20 text-center bg-white dark:bg-gray-900"> 
+   <div class="max-w-4xl mx-auto px-4" data-aos="fade-up"> 
+    <h3 class="text-3xl font-bold mb-12">My Stats</h3> 
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8"> 
+     <div> 
+      <h4 class="text-5xl font-bold text-blue-600 dark:text-blue-400 counter" data-target="10000">0</h4> 
+      <p class="mt-2 text-gray-600 dark:text-gray-300">TikTok Followers</p> 
+     </div> 
+     <div> 
+      <h4 class="text-5xl font-bold text-purple-600 dark:text-purple-400 counter" data-target="5000">0</h4> 
+      <p class="mt-2 text-gray-600 dark:text-gray-300">Instagram Fans</p> 
+     </div> 
+     <div> 
+      <h4 class="text-5xl font-bold text-pink-600 dark:text-pink-400 counter" data-target="200">0</h4> 
+      <p class="mt-2 text-gray-600 dark:text-gray-300">Videos Created</p> 
+     </div> 
+    </div> 
+   </div> 
+  </section> <!-- Contact --> 
+  <section id="contact" class="max-w-4xl mx-auto px-4 py-20"> 
+   <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 md:p-12" data-aos="fade-up"> 
+    <h3 class="text-3xl font-bold mb-8 text-center">Let's Connect</h3> 
+    <form action="https://formspree.io/f/mnqewvpv" method="POST" class="space-y-6"> 
+     <input type="text" name="name" placeholder="Your Name" class="w-full p-4 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white" required> 
+     <input type="email" name="email" placeholder="Your Email" class="w-full p-4 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white" required> <textarea name="message" placeholder="Your Message" rows="5" class="w-full p-4 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white" required></textarea> <button type="submit" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full hover:shadow-md transition"> Send Message </button> 
+    </form> 
+   </div> 
+  </section> <!-- Footer --> 
+  <footer class="bg-gray-900 text-white py-8 text-center"> 
+   <div class="flex justify-center space-x-6 mb-4"> <a href="#"><i class="fab fa-youtube"></i></a> <a href="#"><i class="fab fa-tiktok"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> 
+   </div> 
+   <p class="text-gray-400 text-sm"> © 2025 Anas Nide. Crafted with <i class="fas fa-heart text-red-400"></i> in Malaysia </p> 
+  </footer> <!-- Modal Image Viewer --> 
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50"> 
+   <div class="bg-white p-6 rounded-lg"> 
+    <h2 class="text-xl font-bold mb-4" id="modal-title"></h2> 
+    <img src="https://via.placeholder.com/600x400" alt="Gallery" id="modal-img" class="w-full rounded-lg"> <button onclick="closeModal()" class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Close</button> 
+   </div> 
+  </div> <!-- Scripts --> 
   <script>
-    document.getElementById('theme-toggle').addEventListener('click', () => {
-      document.body.classList.toggle('dark');
+    AOS.init();
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+    }
+
+    new Typed('#typed-text', {
+      strings: ['Content Creator', 'IT Enthusiast', 'OOTD Lover'],
+      typeSpeed: 60,
+      backSpeed: 40,
+      backDelay: 2000,
+      loop: true
     });
-  </script>
-</body>
+
+    // Counter animation
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const inc = target / speed;
+        if(count < target) {
+          counter.innerText = Math.ceil(count + inc);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
+      }
+      updateCount();
+    });
+
+    // Modal gallery
+    function openModal(title) {
+      document.getElementById('modal-title').innerText = title;
+      document.getElementById('modal-img').src = "https://via.placeholder.com/600x400";
+      document.getElementById('modal').classList.remove('hidden');
+      document.getElementById('modal').classList.add('flex');
+    }
+    function closeModal() {
+      document.getElementById('modal').classList.add('hidden');
+    }
+  </script> 
+ </body>
 </html>
