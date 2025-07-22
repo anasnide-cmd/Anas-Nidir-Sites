@@ -1,12 +1,15 @@
 {
   "hosting": {
     "public": "public",
-    "rewrites": [ { "source": "**", "destination": "/index.html" } ],
-    "redirects": [
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
       {
-        "source": "/",
-        "destination": "https://anasnidir.com",
-        "type": 301
+        "source": "**",
+        "destination": "/index.html"
       }
     ]
   }
